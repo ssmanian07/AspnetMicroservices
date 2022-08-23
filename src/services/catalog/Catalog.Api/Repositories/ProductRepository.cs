@@ -58,11 +58,11 @@ namespace Catalog.Api.Repositories
 
         public async Task<IEnumerable<Product>> GetProducts()
         {
-            FilterDefinition<Product> filter = Builders<Product>.Filter.Exists(p => true);
+            //FilterDefinition<Product> filter = Builders<Product>.Filter.Exists(p => true);
 
-            return await GetProductByFilter(filter);
+            //return await GetProductByFilter(filter);
 
-            //return await _catalogContext.Products.Find(P => true).ToListAsync();
+            return await _catalogContext.Products.Find(P => true).ToListAsync();
         }
 
         
